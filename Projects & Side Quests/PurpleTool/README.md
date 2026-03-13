@@ -1,4 +1,4 @@
-# Network & Web Scanning tool
+# Network & Web Scanning tool for the Purple Team Project
 - Includes all techniques used during the project
 - Nmap, SQLMap, Nikto, NCrack, Linpeas and other tools/commands integrated
 - Provides full output report in .txt, including vulnerabilities and CVEs
