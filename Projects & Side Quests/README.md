@@ -7,6 +7,6 @@
 
 ## PurpleTool:
 - Tool created for the last project of the Cybersecurity Course
-- I've writen a more simple version then added steroids with Claude
-- Network/Webscanning and other useful tools integrated
-- Provides full output report in .txt, including vulnerabilities and CVEs 
+- Network & Web Scanning, other useful tools and commands integrated
+- Provides full output report in .txt, including vulnerabilities and CVEs
+- Curated with Claude
