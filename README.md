@@ -1,12 +1,12 @@
 # Cybersecurity
 
-## On my path in Cybersecurity - All my progress and side quests will be registered here. 
+## On my path in Cybersecurity, always learning, always curious.
 
 ### If you're here, feel free to help, criticize, give hints or any other recommendation. Everything is appreciated, everything helps the learning curve. 
 ### Thanks!
 
 ## At the moment:
-- Focusing on Labs and Practical Exercises. Preparing for ComptiSec+ beginner level certifications such as eJPT, eSOC.
+- Focusing on Labs and Practical Exercises. Preparing for ComptiSec+ and other beginner level certifications such as eJPT, eSOC.
 - I'm learning Python and Vibe Coding at the same time. I have some ambitious projects/ideas, still trying to take small steps and do small projects so I can keep track and learn from them.
 - Learning as much as possible about AI, I believe it can be an incredible tool, improving human capabilities and daily life
 - Touching grass and doing sports as much as possible
