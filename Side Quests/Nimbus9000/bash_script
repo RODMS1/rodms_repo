@@ -1,0 +1,123 @@
+#!/bin/bash
+cat<<EOF
+__    _  _______  _______  _     _  _______  ______    ___   _    _______  _______  _______  ___     
+|  |  | ||       ||       || | _ | ||       ||    _ |  |   | | |  |       ||       ||       ||   |    
+|   |_| ||    ___||_     _|| || || ||   _   ||   | ||  |   |_| |  |_     _||   _   ||   _   ||   |    
+|       ||   |___   |   |  |       ||  | |  ||   |_||_ |      _|    |   |  |  | |  ||  | |  ||   |    
+|  _    ||    ___|  |   |  |       ||  |_|  ||    __  ||     |_     |   |  |  |_|  ||  |_|  ||   |___ 
+| | |   ||   |___   |   |  |   _   ||       ||   |  | ||    _  |    |   |  |       ||       ||       |
+|_|  |__||_______|  |___|  |__| |__||_______||___|  |_||___| |_|    |___|  |_______||_______||_______|
+ __    _  ___   __   __  _______  __   __  _______    _______  _______  _______  _______              
+|  |  | ||   | |  |_|  ||  _    ||  | |  ||       |  |  _    ||  _    ||  _    ||  _    |             
+|   |_| ||   | |       || |_|   ||  | |  ||  _____|  | | |   || | |   || | |   || | |   |             
+|       ||   | |       ||       ||  |_|  || |_____   | |_|   || | |   || | |   || | |   |             
+|  _    ||   | |       ||  _   | |       ||_____  |  |___    || |_|   || |_|   || |_|   |             
+| | |   ||   | | ||_|| || |_|   ||       | _____| |      |   ||       ||       ||       |             
+|_|  |__||___| |_|   |_||_______||_______||_______|      |___||_______||_______||_______|      ~
+EOF
+echo -e "\nVERSION 1.0.0"
+
+echo -e "\nBy RDMS"
+echo -e "\nCirca 2025"
+echo -e "\n=== Network Tools Menu ==="
+
+
+
+while true; do
+    echo "1) Full Scan"
+    echo "2) Check Network Interface Information"
+    echo "3) Ping a Host"
+    echo "4) Port Scan with Nmap"
+    echo "5) Display Routing Table"
+    echo "6) Traceroute to Host"
+    echo "7) Exit"
+    read -p "Choose an option: " tool
+    echo -e "\nConnecting ..."
+
+    case $tool in
+        1)
+            echo "== Checking network interfaces =="
+            sleep 1
+            if command ifconfig &> /dev/null; then
+                ifconfig
+            else
+                ip address
+            fi
+
+# Simple ping with 1 second wait time and status confirmation.
+# NMAP command will be updated in the future
+
+            echo "Step 2: == Ping host =="
+            read -p "Enter host to ping: " host
+            read -p "Enter number of pings: " count
+            echo " == Pinging $host $count times == "
+            sleep 1
+            if ping -c "$count" "$host" -w 1 &> /dev/null; then
+                echo "$host is up"
+            else
+                echo "$host is down"
+            fi
+            sleep 1
+            echo "Step 3: == Nmap =="
+            sleep 1
+            if [[ -n "$host" ]]; then
+                echo "Running nmap on $host..."
+                nmap "$host"
+            fi
+            ;;
+        2)
+            echo " == Checking network interfaces == "
+            sleep 1
+            if command ifconfig &> /dev/null; then
+                ifconfig
+            else
+                ip address
+            fi
+            ;;
+        3)
+            read -p "Enter host to ping: " host
+            read -p "Enter number of pings: " count
+            echo " == Pinging $host $count times == "
+            sleep 1
+            if ping -c "$count" "$host" -w 1 &> /dev/null; then
+                echo "$host is up"
+            else
+                echo "$host is down"
+            fi
+            ;;
+        4)
+            read -p "Enter host to scan with Nmap: " host
+            echo " == Scanning $host with Nmap == "
+            sleep 1
+            nmap "$host"
+            ;;
+        5)
+            echo " == Displaying routing table == "
+            sleep 1
+            ip route show
+            ;;
+        6)
+            read -p "Enter host for traceroute: " host
+            echo " == Tracing route to $host == "
+            sleep 1
+            traceroute "$host" 2>/dev/null
+            ;;
+        7)
+            echo "Disconnecting ..."
+            sleep 1
+            break
+            ;;
+        *)
+            echo "Invalid option, please select 1-7."
+            ;;
+    esac
+
+    echo
+    read -p "Do you want to pick another tool? (y/n): " answer
+    if [[ "$answer" != "y" ]]; then
+        echo -e "\nHope to see you again."
+        echo -e "\nDisconnecting ..."
+        break
+    fi
+    echo
+done
