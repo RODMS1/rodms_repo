@@ -9,8 +9,8 @@
 - Focusing on Labs and Practical Exercises. Preparing for ComptiSec+ and other beginner level certifications such as eJPT, eSOC.
 - Project SOC: Building my own SOC for both defense and attack scenarios using AWS.
 - I'm learning Python and Vibe Coding at the same time. I have some ambitious projects/ideas, still trying to take small steps and do small projects so I can keep track and learn from them.
-- Learning as much as possible about AI, I believe it can be an incredible tool, improving human capabilities and daily life
-- Touching grass and doing sports as much as possible
+- Learning as much as possible about AI, I believe it can be an incredible tool, improving human capabilities and daily life.
+- Touching grass and doing sports as much as possible.
 
 
 ## Certifications:
