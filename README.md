@@ -1,7 +1,5 @@
 # Cybersecurity (GitHub under construction)
 
-## On my path in Cybersecurity, always learning, always curious.
-
 ### If you're here, feel free to help, criticize, give hints or any other recommendation. Everything is appreciated, everything helps the learning curve. 
 ### Thanks!
 
