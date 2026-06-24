@@ -1,4 +1,7 @@
-## Projects
-Main projects im working on. (Will be updated soon)
+# Projects
+
+### Pentest lab (AWS)
+
+### SOC Azure: Elastic, Snort
 
 
