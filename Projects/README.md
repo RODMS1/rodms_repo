@@ -1,7 +1,6 @@
-# Projects
+# Projects (Update in progress)
 
 ### Pentest lab (AWS)
 
-### SOC Azure: Elastic, Snort
-
+### SOC Azure:
 
